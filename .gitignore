@@ -1,0 +1,5 @@
+# Ignorar arquivos .env
+.env
+
+# Ignorar arquivos serviceaccount.json
+serviceaccount.json
