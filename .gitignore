@@ -3,3 +3,16 @@
 
 # Ignorar arquivos serviceaccount.json
 serviceaccount.json
+node_modules
+PORTUGA-casa.mp3
+PORTUGA-casa2.mp3
+app.js
+audio.mp3
+config.json
+index.js
+main.js
+node_modules.zip
+portuga.js
+portuga2.js
+server.js
+your-module-file.mjs
