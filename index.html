@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Texto para Áudio</title>
+    </head>
+<body>
+    
+<script src="https://unpkg.com/vue@2.2.6/dist/vue.js"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<div class="container m-3" id="app">
+<h2>Recorrendo.com - Texto em Voz</h2>
+
+<audio :src="audio" ref="audio" controls autoplay>
+</audio>
+<div class="form-group">
+    <label for="text">Texto para  sintetizar:</label>
+    <input type="text" class="form-control" v-model="synthesisText" placeholder="Enter text" id="text">
+</div>
+<div>
+    <button @click="downloadAudio">Sintetiza e ouvir</button>
+</div>
+</div>
+
+<script>
+
+    new Vue({
+        el: "#app",
+        data: {
+            audio: null,
+            synthesisText: "Porque Deus tanto amou o mundo que deu o seu Filho Unigênito, para que todo o que nele crer não pereça, mas tenha a vida eterna.   - João 3 16"
+        },
+        methods: {
+            downloadAudio() {
+                this.audio = "/download-audio?textToSynthesize=" + encodeURIComponent(this.synthesisText);
+                this.$refs.audio.load();
+                this.$refs.audio.play();
+            }
+        }
+    });
+
+</script>
+</body>
+</html> 

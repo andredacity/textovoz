@@ -1,0 +1,23 @@
+{
+  "name": "texttospeech",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon servidor.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@agoric/harden": "^0.2.0",
+    "@google-cloud/text-to-speech": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "fluent-ffmpeg": "^2.1.2",
+    "nodemon": "^3.0.1",
+    "uuid": "^9.0.1"
+  }
+}
