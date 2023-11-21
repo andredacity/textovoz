@@ -15,7 +15,11 @@ app.get('/download-audio', async (req, res) => {
     let textToSynthesize = req.query.textToSynthesize;
     console.log("textToSynthesize:", textToSynthesize);
 
-    const client = new textToSpeech.TextToSpeechClient();
+   // const client = new textToSpeech.TextToSpeechClient();
+    const client = new textToSpeech.TextToSpeechClient({
+  credentials: googleCloudKey,
+});
+
     const request = {
         input: {text: textToSynthesize || 'Porque Deus tanto amou o mundo que deu o seu Filho Unigênito, para que todo o que nele crer não pereça, mas tenha a vida eterna.   - João 3 16'},
         // Select the language and SSML voice gender (optional)
