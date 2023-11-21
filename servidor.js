@@ -4,7 +4,9 @@ const app = express();
 const stream = require("stream");
 const ffmpeg = require('fluent-ffmpeg');
 const textToSpeech = require('@google-cloud/text-to-speech');
-process.env.GOOGLE_APPLICATION_CREDENTIALS = 'serviceaccount.json';
+GOOGLE_APPLICATION_CREDENTIALS = 'serviceaccount.json';
+const googleCloudKey = JSON.parse(process.env.GOOGLE_CLOUD_KEY || '{}');
+process.env.GOOGLE_APPLICATION_CREDENTIALS = 'googleCloudKey';
 
 app.use(express.static("./"));
 
